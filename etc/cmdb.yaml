@@ -19,7 +19,7 @@ RedisConf:
 
 Log:
   ServiceName: cmdbRpcLogger
-  Mode: file
+  Mode: console
   Path: /home/data/logs/cmdb/rpc
   Encoding: json
   Level: info
