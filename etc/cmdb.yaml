@@ -1,0 +1,33 @@
+Name: cmdb.rpc
+ListenOn: 0.0.0.0:13134
+
+DatabaseConf:
+  Type: mysql
+  Host: 10.135.170.160
+  Port: 33069
+  DBName: simple_admin_cmdb
+  Username: root
+  Password: 123456
+  MaxOpenConn: 100
+  SSLMode: disable
+  CacheTime: 5
+
+RedisConf:
+  Host: 10.135.170.160:36379
+  Type: node
+  Pass: "123456"
+
+Log:
+  ServiceName: cmdbRpcLogger
+  Mode: file
+  Path: /home/data/logs/cmdb/rpc
+  Encoding: json
+  Level: info
+  Compress: false
+  KeepDays: 7
+  StackCoolDownMillis: 100
+
+Prometheus:
+  Host: 0.0.0.0
+  Port: 4001
+  Path: /metrics
